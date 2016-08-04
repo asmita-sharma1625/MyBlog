@@ -2,14 +2,16 @@
 <head>
 </head>
 <body>
-<p>
-  <b>Title:</b>
-  <%=h @post.title %>
+<div class="container">
 
+<p>
+  <b><%=h @post.title %></b>
+  <p>
+    -<%=h @post.author %>
+  </p>
 </p>
-
+ 
 <p>
-  <b>Body:</b>
   <%=h @post.body %>
 </p>
 
@@ -37,9 +39,9 @@
    </p>
  
    <p>
-     <%= link_to "Add Comment", new_comment_path(post_id: @post.id) %>
+     <%= link_to "Add Comment", new_comment_path(post_id: @post.id), :class => 'btn btn-sm btn-danger' %>
    </p>
 <% end %>
-
+</div>
 </body>
 </html>
