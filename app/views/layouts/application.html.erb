@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Asmita's First Blog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <div class="container" style="margin-top:2%">
+    <h1 style="font-family: "Times New Roman", Georgia, Serif;" class="text-danger"><em>Asmita's First Blog</em></h1>
+    <p id="notice"><%= notice %></p>
+    <%= alert %>
+      <div class="text-right">
+        <a href="/posts/new" class="btn btn-sm btn-warning">Got Something To Share!! Write Here</a>
+      </div>
+    </div>
+
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

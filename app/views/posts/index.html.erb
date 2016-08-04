@@ -1,0 +1,20 @@
+<html>
+<head>
+<% content_for :javascript_includes do %>
+  <%= javascript_include_tag "post_index.js" %>
+<% end %>
+</head>
+<body>
+<br /><br />
+<div class="container">
+<% @posts.each_with_index do |post, index| %>
+  <div class="alert" id=<%= index %>>
+    <p><h4><%= post.title %></h4></p>
+    <p><%= post.summary %></p>
+  </div>
+<% end %>
+<br>
+
+</div>
+</body>
+</html>
